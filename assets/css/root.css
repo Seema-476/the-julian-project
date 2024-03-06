@@ -12,20 +12,21 @@
     --fs-2xl: 64px;
 
     /* font-color */
-    --fc-black: #000;
+    --fc-black: #000000;
     --fc-primary-black: #1a1a1a;
     --fc-secondary-black: #090909;
-
     --fc-regular-black: #1b1b1a;
     --fc-white: #fff;
     --fc-off-white: #fcf9f6;
     --fc-brown: #322610;
-    --fc-light-brown: #4e4024;
+    --fc-light-brown: #312510;
     --fc-gray: #b2afac;
     --fc-primary-gray: #b0aeac;
     --fc-secondary-gray: #5f5f5f;
     --fc-dark-gray: #b1afac;
     --fc-light-gray: #bfbab1;
+    --fc-light-primary-gray: #4c4c4b;
+    --fc-light-secondary-gray: #CA99440A;
     --fc-gray-regular: #c0bab1;
     --fc-gray-100: #4d4d4d;
     --fc-gray-200: #b5b1ad;

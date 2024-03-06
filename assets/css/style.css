@@ -16,7 +16,7 @@
 }
 
 .bgnav {
-    background: var(--fc-black);
+    background: linear-gradient(172.75deg, var(--fc-black) 25.73%, rgba(0, 0, 0, 0) 66.87%);
 }
 
 .home {
@@ -44,7 +44,7 @@
     border-radius: 2px;
     transition: 2s;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .navbtnsubmit::after {
@@ -59,7 +59,7 @@
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    z-index: 1;
+    z-index: -1;
 }
 
 .button-bg {
@@ -115,6 +115,7 @@
     border: none;
     padding: 12px 24px;
     position: relative;
+    z-index: 1;
 
 }
 
@@ -130,6 +131,7 @@
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    z-index: -1;
 }
 
 .btnsubmit1 {
@@ -141,7 +143,7 @@
     border-radius: 2px;
     padding: 12px 24px;
     position: relative;
-
+    z-index: 1;
 }
 
 .btnsubmit1::after {
@@ -156,6 +158,7 @@
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    z-index: -1;
 }
 
 .text {
@@ -235,6 +238,7 @@
     border: none;
     padding: 12px 24px;
     position: relative;
+    z-index: 1;
 }
 
 .btnsubmit::after {
@@ -249,6 +253,7 @@
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    z-index: -1;
 }
 
 
@@ -275,6 +280,12 @@
     color: var(--fc-off-white);
     border: none;
 
+}
+
+.iconposition {
+    position: absolute;
+    bottom: 28px;
+    left: 33px;
 }
 
 .absolutebtn {
@@ -360,7 +371,7 @@
     padding: 17px 33px 17px 32px;
     border-radius: 8px;
     position: relative;
-
+    z-index: 1;
 }
 
 .nav-item::after {
@@ -369,6 +380,21 @@
     inset: 0;
     border-radius: 8px;
     padding: 0px 0 0 2px;
+    background: linear-gradient(45deg, var(--fc-primary-golden), var(--fc-primary-golden100));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.nav.nav-tabs .nav-item:hover.nav-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 1px 1px 1px 2px;
     background: linear-gradient(45deg, var(--fc-primary-golden), var(--fc-primary-golden100));
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
@@ -387,8 +413,6 @@
     border: none;
     gap: 15px;
 }
-
-
 
 .max-w-421 {
     max-width: 421px;
@@ -540,12 +564,13 @@
     border-radius: 24px;
     padding: 24px;
     transition: 300ms linear;
+    background: var(--fc-light-secondary-gray);
 
 }
 
 
 .cardborder:hover {
-    background-color: var(--fc-brown);
+    background-color: var(--fc-light-brown);
     border: 0.2px solid transparent;
 
 }
@@ -562,7 +587,9 @@
     border-radius: 16px;
     padding: 0.5px;
     background: linear-gradient(45deg, var(--fc-primary-golden), var(--fc-primary-golden100));
-
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-tab {
@@ -577,6 +604,7 @@
     padding: 12px 16px;
     margin-top: 64px;
     position: relative;
+    z-index: 1;
 }
 
 .btn-tab::after {
@@ -591,6 +619,7 @@
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    z-index: -1;
 }
 
 
@@ -614,6 +643,7 @@
     padding: 12px 24px;
     border-radius: 2px;
     position: relative;
+    z-index: 1;
 }
 
 .btndonate::after {
@@ -626,6 +656,7 @@
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    z-index: -1;
 }
 
 .btndonatebox {
@@ -634,6 +665,9 @@
     padding: 17px 28px;
     border-radius: 16px;
     box-shadow: 0px 0px 20px 4px var(--fc-light-gray900);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bglogo {
@@ -675,6 +709,7 @@
     border: none;
     cursor: pointer;
     position: relative;
+    z-index: 1;
 }
 
 .btnreadmore::after {
@@ -687,7 +722,7 @@
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    z-index: 1;
+    z-index: -1;
 }
 
 .slidepy {
@@ -712,12 +747,13 @@
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    z-index: -1;
 }
 
 .slider-box {
     border-radius: 10px;
     border: 2px solid var(--fc-grey);
-    padding: 30px;
+    padding-top: 30px;
 
 }
 
@@ -725,16 +761,19 @@
     height: inherit !important;
     display: flex !important;
     margin-bottom: 70px;
+    justify-content: center !important;
 }
 
 .slick-track {
     display: flex !important;
     gap: 190px !important;
     flex-wrap: nowrap;
+
 }
 
 .slick-current .slick-active {
     max-width: 1000px !important;
+    justify-content: center !important;
 }
 
 .slick-dots {
@@ -1150,8 +1189,8 @@
 }
 
 /* ------------------------------------------------------timeline2----------------------------------- */
-.bg-black {
-    background-image: url(../images/bgblackimage.png);
+.bg-publico {
+    background-image: url(../images/publicobg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1166,9 +1205,10 @@
     text-align: center;
 }
 
+/* 
 .pblicobg {
     background-image: url(../images/bgpblico.png);
-}
+} */
 
 .expert {
     color: var(--fc-gray-400);
@@ -1457,7 +1497,7 @@
     border: none;
     border-radius: 2px;
     margin-top: 46px;
-    z-index: 4;
+    z-index: 1;
 }
 
 .btn-view::after {
@@ -1470,7 +1510,7 @@
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    z-index: 1;
+    z-index: -1;
 }
 
 /* -------------------------------------timeline2--------------------------------------------- */
@@ -1545,6 +1585,7 @@
     border: none;
     border-radius: 2px;
     position: relative;
+    z-index: 1;
 }
 
 .btnfeb::after {
@@ -1556,6 +1597,7 @@
     background: linear-gradient(45deg, var(--fc-linear-golden), var(--fc-linear-golden1));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    z-index: -1;
 }
 
 /* -------------------------------------------------------------tab2-----------------------------------------------------  */
@@ -1624,6 +1666,8 @@
     text-align: left;
     background-color: inherit;
     border-bottom: 1px solid var(--fc-gray-900) !important;
+    position: relative;
+    z-index: 2;
 }
 
 .nav-pills .nav-link1.active {
@@ -1635,7 +1679,6 @@
     padding: 24px;
     border-radius: 2px !important;
     border: none;
-
 }
 
 .navborder {
@@ -1645,6 +1688,12 @@
 
 .nav1 {
     border-right: 1px solid var(--fc-gray-900);
+    width: 100%;
+    position: relative;
+}
+
+.nav1 .nav-link1.active svg path {
+    fill: url(#gradient);
 }
 
 .fade:not(.show) {
@@ -1652,6 +1701,22 @@
     display: none;
 }
 
+.nav-link1.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    border-radius: 0px;
+    border-right: 8px solid transparent;
+    border-top: 0px solid black;
+    border-left: 0px solid black;
+    border-bottom: 0px solid black;
+    background: linear-gradient(to right, var(--fc-linear-golden) 0 20%, var(--fc-linear-golden1) 21% 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1 !important;
+}
 
 .nav1 .nav-link1.active {
     background-color: linear-gradient(45deg, var(--fc-linear-golden), var(--fc-linear-golden1));
@@ -1692,7 +1757,7 @@
     border-radius: 2px;
     margin-top: 48px;
     position: relative;
-    /* z-index: -1; */
+    z-index: 1;
 
 }
 
@@ -1706,6 +1771,7 @@
     background: linear-gradient(45deg, var(--fc-linear-golden), var(--fc-linear-golden1));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    z-index: -1;
 }
 
 .accordianpy {
@@ -1723,6 +1789,32 @@
 
 }
 
+.accordian1::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 3px;
+    background: var(--fc-gray-100);
+    border-radius: 20px;
+    right: 30px;
+    top: 28px;
+}
+
+.accordian1::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 14px;
+    background: var(--fc-gray-100);
+    border-radius: 20px;
+    right: 35px;
+    top: 22px;
+
+}
+
+.accordian1.active.accordian1::before {
+    height: 0;
+}
 
 .para {
     color: var(--fc-gray-100);
@@ -1751,7 +1843,6 @@
 
 }
 
-
 .accordianbtn {
     cursor: pointer;
 }
@@ -1773,6 +1864,32 @@
     padding-top: 18px;
 
 }
+
+/* 
+.accordian1.active .accordianbtn .acc_icon {
+    transform: rotate(135deg)
+} */
+/* 
+article:nth-child(1) {
+    width: 10px;
+    height: 2px;
+    background: var(--fc-light-primary-gray);
+    transform: rotate(90deg);
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.cross article:nth-child(1) {
+    opacity: 0;
+}
+
+article:nth-child(2) {
+    width: 9px;
+    height: 2px;
+    background: var(--fc-light-primary-gray);
+    border-radius: 20px;
+    margin-left: -10px;
+} */
 
 
 /* ----------------------------------------------------accordian------------------------------------------------- */
@@ -1805,6 +1922,7 @@
     margin-top: 34px;
     padding: 12px 24px;
     position: relative;
+    z-index: 1;
 
 }
 
@@ -1817,7 +1935,7 @@
     background: linear-gradient(45deg, var(--fc-linear-golden), var(--fc-linear-golden1));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
-    z-index: 3;
+    z-index: -1;
 
 }
 
@@ -1855,6 +1973,22 @@
     padding-top: 38px;
 }
 
+.paddingright {
+    padding-right: 67px;
+}
+
+.paddinglzero {
+    padding-left: 26px;
+}
+
+.paddinggrades {
+    padding-left: 82px;
+}
+
+.paddingrate {
+    padding-right: 40px;
+}
+
 /* --------------------------------------------------footer section-------------------------------------- */
 .footerbg {
     background-image: url(../images/Footerbg.png);
@@ -1880,12 +2014,10 @@
     font-weight: 700;
     line-height: 28px;
     padding-bottom: 22px;
-
 }
 
 .footerpy {
     padding-top: 84px;
-
 }
 
 .max-w405 {
@@ -1909,6 +2041,7 @@
     padding: 12px 24px;
     margin-top: 22px;
     position: relative;
+    z-index: 1;
 }
 
 .footerbtn::before {
@@ -1920,7 +2053,7 @@
     background: linear-gradient(45deg, var(--fc-linear-golden), var(--fc-linear-golden1));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
-    z-index: 1
+    z-index: -1;
 }
 
 .project {
@@ -2010,7 +2143,7 @@
         top: 0;
         right: -100%;
         transition: all 300ms linear;
-        z-index: 1;
+        z-index: 2;
     }
 
     .menuicon {
@@ -2021,7 +2154,7 @@
         justify-content: space-between;
         flex-direction: column;
         cursor: pointer;
-        z-index: 2;
+        z-index: 3;
     }
 
     .menuicon>span {
@@ -2042,11 +2175,6 @@
 
 
 @media (min-width:320px) and (max-width:1199.98px) {
-    .timeline::after {
-        left: 7%;
-        top: 35px;
-    }
-
     .flex {
         flex-wrap: wrap;
         padding-left: 95px;
@@ -2090,6 +2218,31 @@
 }
 
 @media(min-width:320px) {
+    .bgimage {
+        background-image: url(../images/Herobg.png);
+    }
+
+    .paddinggrades {
+        padding-left: 12px;
+    }
+
+    .paddinglzero {
+        padding-left: 12px;
+    }
+
+    .iconposition {
+        position: absolute;
+        bottom: 10px;
+        left: 12px;
+    }
+
+    .historybg {
+        background-image: url(../images/tab-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
     .imageabsolute {
         top: 44%;
     }
@@ -2282,6 +2435,12 @@
 }
 
 @media(min-width:576px) {
+    .iconposition {
+        position: absolute;
+        bottom: 28px;
+        left: 33px;
+    }
+
     .imageabsolute {
         top: 10%;
     }
@@ -2361,16 +2520,6 @@
 
     }
 
-    .absolutenext {
-        top: 50%;
-        right: 0;
-    }
-
-    .absoluteprev {
-        top: 50%;
-        left: 0;
-    }
-
     .sliderboxborder {
         padding: 40px;
     }
@@ -2385,6 +2534,18 @@
 }
 
 @media(min-width:768px) {
+    .bgimage {
+        background-image: url(../images/herosection.png);
+    }
+
+    .paddinggrades {
+        padding-left: 82px;
+    }
+
+    .paddingright {
+        padding-right: 105px;
+    }
+
     .imageabsolute {
         top: 0;
     }
@@ -2447,12 +2608,12 @@
 
     .absolutenext {
         top: 50%;
-        right: 35px;
+        right: 0;
     }
 
     .absoluteprev {
         top: 50%;
-        left: 40px;
+        left: 0;
     }
 
     .padding01 {
@@ -2460,12 +2621,35 @@
     }
 
     .slick-track {
-        gap: 85px !important;
+        gap: 30px !important;
     }
 
 }
 
 @media(min-width:992px) {
+    .paddinggrades {
+        padding-left: 12px;
+    }
+
+    .paddingright {
+        padding-right: 67px;
+    }
+
+    .paddinglzero {
+        padding-left: 0;
+    }
+
+    .timeline::after {
+        left: 6.5%;
+    }
+
+    .historybg {
+        background-image: url(../images/tabhistorybg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
     .h14 {
         height: 14px;
     }
@@ -2532,12 +2716,12 @@
 
     .absolutenext {
         top: 50%;
-        right: 40px;
+        right: 0;
     }
 
     .absoluteprev {
         top: 50%;
-        left: 90px;
+        left: 0;
     }
 
     .padding2 {
@@ -2549,7 +2733,7 @@
     }
 
     .slick-track {
-        gap: 190px !important;
+        gap: 30pxpx !important;
     }
 
     .step::after {
@@ -2558,6 +2742,10 @@
 }
 
 @media(min-width:1200px) {
+    .timeline::after {
+        left: 9.5%;
+    }
+
     .shadowbox {
         transform: translateY(-70px);
     }
@@ -2620,12 +2808,12 @@
 
     .absolutenext {
         top: 50%;
-        right: 5%;
+        right: 3%;
     }
 
     .absoluteprev {
         top: 50%;
-        left: 10%;
+        left: 4%;
     }
 }
 
@@ -2677,6 +2865,6 @@
 
     .absoluteprev {
         top: 50%;
-        left: 14%;
+        left: 7%;
     }
 }
